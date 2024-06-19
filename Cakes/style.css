@@ -72,6 +72,7 @@ header {
                 padding: 0.25rem 1rem 0.25rem;
                 list-style: none;
             }
+            
             a {
                 color: white;
             }
@@ -111,6 +112,40 @@ header {
         #heroButton:hover {
             transition: 200ms;
             background-color: var(--AccentColorPink);
+        }
+    }
+
+    #mobileNavigationButton {
+        position: fixed;
+        display: none;
+        z-index: 1;
+
+        img {
+            width: 15vw;
+        }
+    }
+
+    #mobileNavigation {
+        z-index: 2;
+        position: fixed;
+        display: none;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(3px);
+
+        ul li {
+            list-style: none;
+            padding: 1rem;
+        }
+
+        a {
+            padding: 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        a:hover {
+            color: var(--AccentColorPink);
         }
     }
 }
@@ -154,7 +189,6 @@ header {
     background-color: #f7f7f7;
     transition: 200ms;
     box-shadow: 0 0 10px 10px rgb(231, 231, 231);
-
 }
 
 
@@ -229,7 +263,6 @@ header {
     vertical-align: middle;
 
     a {
-        /* line-height: 2rem; */
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -255,7 +288,6 @@ footer {
         justify-content: center;
 
         a {
-            /* line-height: 2rem; */
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -283,11 +315,14 @@ footer {
             padding: 0.5rem;
         }
     }
-
 }
 
 
 @media only screen and (max-width: 850px) {
+
+    #promotions, #about, #location {
+        max-width: 75%;
+    }
 
     header {
         grid-template-rows: 75vh 75vh;
@@ -301,10 +336,8 @@ footer {
             }
         }
 
-    
         #headerHero {
             grid-area: 2 / 1 / 2 / span 2;
-
         }
     }
 }
@@ -314,16 +347,37 @@ footer {
 @media only screen and (max-width: 600px) {
 
     .productSection {
-
         #cakeContainer, #cupcakeContainer {
             grid-template-columns: repeat(2, 1fr);
         }
+    }
+
+    #promotions, #about, #location {
+        max-width: 90%;
+    }
+
+    #contact a span {
+        display: none;
+    }
+
+    header {
+        #mainNav {
+            display: none;
+        }
+
+        #mobileNavigationButton {
+            display: block;
+        }
+    }
+
+    * #secondaryNav {
+        display: none;
     }
 }
 
 @media only screen and (max-width: 400px) {
 
-    #promotions {
-        max-width: 90%;
+    #shareMe a span {
+        display: none;
     }
 }
