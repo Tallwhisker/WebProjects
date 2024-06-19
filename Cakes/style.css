@@ -13,7 +13,6 @@ html {
 
 body {
     width: 100vw;
-    min-height: 100vh;
     background-color: var(--PrimaryBackgroundColor);
 }
 
@@ -28,7 +27,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 p {
@@ -51,7 +50,7 @@ a:hover {
 header {
     display: grid;
     grid-template-columns: 60% 40%;
-    grid-template-rows: repeat(2, 45vh);
+    grid-template-rows: repeat(2, minmax(min-content, 45vh));
 
     #headerImage {
         background: url("./Media/Cake6.png") no-repeat center;
@@ -88,11 +87,11 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
 
         #companyLogo {
             max-width: 300px;
-            height: auto;
+            min-width: 50px;
         }
 
         h1 {
@@ -101,6 +100,7 @@ header {
         }
 
         #heroButton {
+            margin-bottom: 2rem;
             color: white;
             font-size: 1.125rem;
             background-color: var(--AccentColorGreen);
@@ -129,17 +129,16 @@ header {
         z-index: 2;
         position: fixed;
         display: none;
-        padding: 1rem;
         background-color: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(3px);
 
         ul li {
             list-style: none;
-            padding: 1rem;
+            padding: 0.5rem;
         }
 
         a {
-            padding: 1rem;
+            padding: 0.5rem;
             color: white;
             font-size: 1.5rem;
         }
@@ -150,11 +149,12 @@ header {
     }
 }
 
+
 .productCard {
     max-width: 250px;
     min-width: min-content;
     box-shadow: 0 0 10px 2px lightgray;
-    text-align: center;
+    text-align: left;
     border-radius: 5px;
     overflow: hidden;
 
@@ -164,11 +164,13 @@ header {
     }
 
     .productTitle {
-        padding-top: 1rem;
+        margin-left: 1rem;
+        padding-top: 0.5rem;
         font-weight: 500;
     }
 
     .productPrice {
+        margin-left: 1rem;
         padding-top: 0.5rem;
     }
 
@@ -185,6 +187,7 @@ header {
     }
 }
 
+
 .productCard:hover {
     background-color: #f7f7f7;
     transition: 200ms;
@@ -193,18 +196,28 @@ header {
 
 
 #secondaryNav {
-    padding: 1rem;
+    background-color: var(--AccentColorGreen);
 
     ul {
+        padding: 0.5rem;
         width: fit-content;
         margin: 0 auto;
 
         li {
-            height: 2rem;
-            line-height: 2rem;
             display: inline;
             padding: 0 1rem;
             list-style: none;
+            
+            a {
+                border-radius: 3px;
+                padding: 0.5rem;
+                color: white;
+                font-size: 1.125rem;
+            }
+            a:hover {
+                transition: 200ms;
+                background-color: var(--AccentColorPink);
+            }
         }
     }
 }
@@ -237,13 +250,14 @@ header {
 
 
 #promotions, #about, #location {
-    margin: 0 auto;
+    margin: 2rem auto;
     max-width: 60%;
     text-align: center;
     line-height: 2rem;
 
     > p {
         text-align: left;
+        margin-bottom: 2rem;
     }
 
     > h2 {
@@ -281,11 +295,15 @@ header {
 
 footer {
     background-color: var(--SecondaryBackgroundColor);
+    padding-bottom: 2rem;
+
+    > div {
+        display: flex;
+        justify-content: center;
+    }
 
     #shareMe {
         padding: 1rem;
-        display: flex;
-        justify-content: center;
 
         a {
             display: inline-flex;
@@ -303,29 +321,22 @@ footer {
             }
         }
     }
-    > div {
-        display: flex;
-        justify-content: center;
 
+    #footerLinks {
         a {
-            padding: 0.5rem 1rem;
-        }
-
-        p {
-            padding: 0.5rem;
+            padding: 1rem;
         }
     }
 }
 
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 910px) {
 
     #promotions, #about, #location {
         max-width: 75%;
     }
 
     header {
-        grid-template-rows: 75vh 75vh;
 
         #headerImage {
             grid-area: 1 / 1 / 1 / span 2;
@@ -340,8 +351,13 @@ footer {
             grid-area: 2 / 1 / 2 / span 2;
         }
     }
-}
 
+    .productSection {
+        #cakeContainer, #cupcakeContainer {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -375,9 +391,28 @@ footer {
     }
 }
 
+
 @media only screen and (max-width: 400px) {
 
-    #shareMe a span {
-        display: none;
+    .productSection {
+        #cakeContainer, #cupcakeContainer {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    #headerHero {
+        h1 {
+            font-size: 2.25rem;
+        }
+    }
+
+    footer {
+        #shareMe a span {
+            display: none;
+        }
+        
+        #footerLinks a {
+            padding: 0.5rem;
+        }
     }
 }
