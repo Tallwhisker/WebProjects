@@ -1,0 +1,67 @@
+{
+    "kevin" : {
+        "info" : {
+            "fullName" : "Kevin Rickardsson",
+            "age" : 32,
+            "location" : "Skåne, Sweden",
+            "github" : "githublink",
+            "email" : "emaillink"
+        },
+        "summary" : "Nyfiken, ordningsam med en fallenhet för teknik.",
+        "description" : "Jag har ett stort intresse för infrastruktur och hur saker i allmänhet fungerar. Jag är självgående och snabbupplärd och jag är angelägen att ha fungerande rutiner och tydlig struktur i arbetet, vilket i min åsikt är en stor fördel när det gäller bland annat kodande.",
+        "jobs" : [
+            { "busschaufför" : {
+                "company" : "bergkvarabuss ab",
+                "time" : "2021-12 - 2023-11",
+                "description" : "Framförning av tung buss i linjetrafik med tillhörande ansvar för säkerhet och kundbemötande. Senare även körning av skolbuss där jag planerade och utförde rundan själv."
+                }
+            },
+            { "busschaufför" : {
+                "company" : "transdev sverige ab",
+                "time" : "2016-12 - 2021-12",
+                "description" : "Framförning av tung buss i linjetrafik med tillhörande ansvar för säkerhet och kundbemötande. 2019 Yttre Trafikledare på depån där jag effektivt sänkte företagets vitesbelopp genom att arbeta proaktivt med underhåll och samkörning tillsammans med verkstaden. Efter någon månad blev jag ombedd att även sköta planering av fordonsflottan i sydöstra Skåne. Företagsövergång 2021-12 p.g.a. upphandlad trafik."
+                }
+            }
+        ],
+        "education" : {
+            "systemdeveloper c#" : {
+                "time" : "2024-05 - pågående",
+                "school" : "lexicon malmö"
+            },
+            "allmän kurs" : {
+                "time" : "2014-04 - 2016-06",
+                "school" : "österlens folkhögskola"
+            },
+            "yrkesförarutbildning" : {
+                "time" : "2012-04 - 2012-09",
+                "school" : "malenagymnasiet sjöbo"
+            }
+        },
+        "skills" : {
+            "tech" : [
+                "html",
+                "css",
+                "javascript",
+                "c#",
+                "MS office (365)"
+            ],
+            "språk" : [
+                "svenska",
+                "engelska"
+            ],
+            "behörigheter" : [
+                "AMBECEDE",
+                "YKB & Förarkort",
+                "Truck A 2, 3, 4 + B 1, 2",
+                "Kran upp till 18 t/m"
+            ]
+        },
+        "pågående" : [
+            "react",
+            "bootstrap, tailwind",
+            "sql",
+            "ado.net",
+            "asp.net"
+        ]
+    }
+}

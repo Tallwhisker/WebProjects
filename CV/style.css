@@ -1,0 +1,54 @@
+html {
+    font-family: "Roboto";
+    font-size: 16px;
+    background-color: #1F1F1F;
+    color: white;
+}
+
+.indent-1 {
+    padding-left: 1rem;
+}
+
+.indent-2 {
+    padding-left: 2rem;
+}
+
+.indent-3 {
+    padding-left: 3rem;
+}
+
+.indent-4 {
+    padding-left: 4rem;
+}
+
+.indent-5 {
+    padding-left: 5rem;
+}
+
+.indent-6 {
+    padding-left: 6rem;
+}
+
+.yellow {
+    color: #F1D710;
+}
+
+.purple {
+    color: plum;
+}
+
+.lightblue {
+    color: #7CDCF0;
+}
+
+.blue {
+    color: #3c7ed3;
+}
+
+.brown {
+    color: #CE9178;
+}
+
+.green {
+    color: #B5C078;
+}
